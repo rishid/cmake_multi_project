@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8.10)
+
+project(app1 C)
+
+file(GLOB C_FILES src/*.c)
+
+add_definitions(${A_DEFINITIONS} ${B_DEFINITIONS})
+
+include_directories(${A_INCLUDE_DIRS} ${B_INCLUDE_DIRS})
+
+add_executable(${PROJECT_NAME} ${C_FILES})
+
+target_link_libraries(${PROJECT_NAME} A B)
